@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Section from '../components/Section';
 import EventCard from '../components/EventCard';
@@ -6,7 +7,7 @@ import { Event, Speaker } from '../types';
 
 const eventSchedule: { day: string; events: Event[] }[] = [
   {
-    day: "Day 1: October 24, 2026",
+    day: "Day 1: February 20, 2026",
     events: [
       { time: "09:00 AM - 10:00 AM", title: "Inauguration & Keynote", description: "Event kick-off with our chief guest.", type: 'seminar' },
       { time: "10:30 AM - 01:00 PM", title: "Workshop on Digital Marketing", description: "Hands-on session with industry experts.", type: 'workshop' },
@@ -14,7 +15,7 @@ const eventSchedule: { day: string; events: Event[] }[] = [
     ]
   },
   {
-    day: "Day 2: October 25, 2026",
+    day: "Day 2: February 21, 2026",
     events: [
       { time: "10:00 AM - 12:00 PM", title: "Best Manager Finals", description: "The ultimate test of management skills.", type: 'competition' },
       { time: "01:30 PM - 03:00 PM", title: "Panel: The Future of AI in Business", description: "A discussion with leading AI professionals.", type: 'seminar' },

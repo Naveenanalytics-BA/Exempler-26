@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Section from '../components/Section';
@@ -6,7 +7,7 @@ import SpeakerCard from '../components/SpeakerCard';
 import FaqItem from '../components/FaqItem';
 
 const featuredSpeakers: Speaker[] = [
-    { name: 'Dr. Evelyn Reed', title: 'CEO, Innovate Inc.', bio: 'A visionary leader in tech and innovation.', imageUrl: 'https://picsum.photos/seed/evelyn_reed/400/400' },
+    { name: 'Dr. B. SUDHAKAR', title: 'Director-MBA', bio: 'Pillar of the department', imageUrl: 'https://picsum.photos/seed/sudhakar/400/400' },
     { name: 'Mr. Johnathan Chen', title: 'Marketing Guru, GrowthX', bio: 'Expert in digital marketing strategies and brand building.', imageUrl: 'https://picsum.photos/seed/johnathan_chen/400/400' },
 ];
 
@@ -60,7 +61,7 @@ const HomePage: React.FC = () => {
       <Section title="Quick Questions">
         <div className="max-w-3xl mx-auto space-y-4">
           <FaqItem question="When and where is the event?" defaultOpen={true}>
-            EXEMPLER'26 will be held on October 24th & 25th, 2026, at the Hindusthan College of Arts & Science campus.
+            EXEMPLER'26 will be held on February 20th & 21st, 2026, at the Hindusthan College of Arts & Science campus.
           </FaqItem>
           <FaqItem question="Who can participate?">
             The event is open to all undergraduate and postgraduate students from any recognized institution.

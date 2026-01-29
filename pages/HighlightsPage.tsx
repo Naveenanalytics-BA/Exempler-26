@@ -5,13 +5,23 @@ import GalleryImage from '../components/GalleryImage';
 import TestimonialCard from '../components/TestimonialCard';
 import { Testimonial } from '../types';
 
+/**
+ * STEP TO ADD YOUR PHOTOS:
+ * 1. Upload your photos to a hosting service (Imgur, Cloudinary, etc.) 
+ *    OR place them in your project folder.
+ * 2. Replace the URLs below with your actual image links.
+ * 3. You can add as many or as few as you like.
+ */
 const galleryImages = [
-  'https://picsum.photos/seed/gallery1/600/400',
-  'https://picsum.photos/seed/gallery2/600/400',
-  'https://picsum.photos/seed/gallery3/600/400',
-  'https://picsum.photos/seed/gallery4/600/400',
-  'https://picsum.photos/seed/gallery5/600/400',
-  'https://picsum.photos/seed/gallery6/600/400',
+  'https://picsum.photos/seed/event1/800/600', // Replace with your image link 1
+  'https://picsum.photos/seed/event2/800/600', // Replace with your image link 2
+  'https://picsum.photos/seed/event3/800/600', // Replace with your image link 3
+  'https://picsum.photos/seed/event4/800/600', // Replace with your image link 4
+  'https://picsum.photos/seed/event5/800/600', // Replace with your image link 5
+  'https://picsum.photos/seed/event6/800/600', // Replace with your image link 6
+  'https://picsum.photos/seed/event7/800/600', // Replace with your image link 7
+  'https://picsum.photos/seed/event8/800/600', // Replace with your image link 8
+  'https://picsum.photos/seed/event9/800/600', // Replace with your image link 9
 ];
 
 const testimonials: Testimonial[] = [
@@ -23,15 +33,24 @@ const testimonials: Testimonial[] = [
 const HighlightsPage: React.FC = () => {
   return (
     <>
-      <Section title="Previous Year Highlights" subtitle="Relive the moments that made our past events unforgettable.">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <Section 
+        title="Event Gallery" 
+        subtitle="Capturing the spirit, competition, and camaraderie of EXEMPLER through the years."
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.map((src, index) => (
-            <GalleryImage key={index} src={src} alt={`Event highlight ${index + 1}`} />
+            <GalleryImage key={index} src={src} alt={`Exempler Event Moment ${index + 1}`} />
           ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+            <p className="text-gray-500 italic text-sm">
+                Have photos from previous years you'd like to share? Tag us on social media!
+            </p>
         </div>
       </Section>
 
-      <Section title="What Our Participants Say" className="bg-gray-800/50">
+      <Section title="Voices of EXEMPLER" className="bg-gray-800/50">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} testimonial={testimonial} />

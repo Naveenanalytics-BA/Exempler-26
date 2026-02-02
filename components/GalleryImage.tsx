@@ -14,6 +14,9 @@ const GalleryImage: React.FC<GalleryImageProps> = ({ src, alt }) => {
         alt={alt}
         loading="lazy"
         className="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110 opacity-90 group-hover:opacity-100"
+        onError={(e) => {
+          (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?auto=format&fit=crop&q=80&w=800";
+        }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
     </div>

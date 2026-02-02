@@ -62,7 +62,7 @@ const RegistrationPage: React.FC = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-brand-accent font-bold">•</span>
-                <span>Registration is <strong>free of cost</strong> for all participants.</span>
+                <span>Registration entry fee is <strong>₹100 per head</strong> for all participants.</span>
               </li>
             </ul>
           </div>

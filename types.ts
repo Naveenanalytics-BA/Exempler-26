@@ -7,7 +7,7 @@ export interface Speaker {
 }
 
 export interface Event {
-  time: string;
+  time?: string;
   title:string;
   description: string;
   type: 'workshop' | 'seminar' | 'competition';

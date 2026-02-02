@@ -4,25 +4,7 @@ import Section from '../components/Section';
 import GalleryImage from '../components/GalleryImage';
 import TestimonialCard from '../components/TestimonialCard';
 import { Testimonial } from '../types';
-
-/**
- * STEP TO ADD YOUR PHOTOS:
- * 1. Upload your photos to a hosting service (Imgur, Cloudinary, etc.) 
- *    OR place them in your project folder.
- * 2. Replace the URLs below with your actual image links.
- * 3. You can add as many or as few as you like.
- */
-const galleryImages = [
-  'https://picsum.photos/seed/event1/800/600', // Replace with your image link 1
-  'https://picsum.photos/seed/event2/800/600', // Replace with your image link 2
-  'https://picsum.photos/seed/event3/800/600', // Replace with your image link 3
-  'https://picsum.photos/seed/event4/800/600', // Replace with your image link 4
-  'https://picsum.photos/seed/event5/800/600', // Replace with your image link 5
-  'https://picsum.photos/seed/event6/800/600', // Replace with your image link 6
-  'https://picsum.photos/seed/event7/800/600', // Replace with your image link 7
-  'https://picsum.photos/seed/event8/800/600', // Replace with your image link 8
-  'https://picsum.photos/seed/event9/800/600', // Replace with your image link 9
-];
+import { SITE_IMAGES } from '../constants/images';
 
 const testimonials: Testimonial[] = [
   { quote: "Exempler was an electrifying experience! The competitions were challenging and the networking opportunities were priceless.", name: "Priya Sharma", role: "Participant, Exempler'25" },
@@ -38,14 +20,15 @@ const HighlightsPage: React.FC = () => {
         subtitle="Capturing the spirit, competition, and camaraderie of EXEMPLER through the years."
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((src, index) => (
+          {SITE_IMAGES.gallery.map((src, index) => (
             <GalleryImage key={index} src={src} alt={`Exempler Event Moment ${index + 1}`} />
           ))}
         </div>
         
-        <div className="mt-12 text-center">
-            <p className="text-gray-500 italic text-sm">
-                Have photos from previous years you'd like to share? Tag us on social media!
+        <div className="mt-12 text-center p-8 bg-gray-800/30 rounded-2xl border border-gray-700">
+            <h4 className="text-white font-bold mb-2">Want to see your photos here?</h4>
+            <p className="text-gray-400 text-sm italic">
+                Tag us on Instagram with <span className="text-brand-accent">#Exempler26</span> or email your high-res photos to our media team.
             </p>
         </div>
       </Section>

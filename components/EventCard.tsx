@@ -19,17 +19,19 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const typeStyles = getEventTypeStyles(event.type);
 
   return (
-    <div className="bg-gray-800/50 p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-start md:items-center gap-6 transition-all duration-300 hover:shadow-brand-primary/20 hover:border-brand-accent/50 border border-transparent">
-        <div className="flex-shrink-0 w-full md:w-32 text-left">
-            <p className="text-brand-accent font-bold text-lg">{event.time}</p>
-        </div>
+    <div className="bg-gray-800/50 p-6 rounded-xl shadow-lg flex flex-col md:flex-row items-start md:items-center gap-6 transition-all duration-300 hover:shadow-brand-primary/20 hover:border-brand-accent/50 border border-gray-700/50">
+        {event.time && (
+          <div className="flex-shrink-0 w-full md:w-32 text-left">
+              <p className="text-brand-accent font-bold text-lg">{event.time}</p>
+          </div>
+        )}
         <div className="flex-grow">
-            <h4 className="text-xl font-bold text-white mb-1">{event.title}</h4>
-            <p className="text-gray-400">{event.description}</p>
+            <h4 className="text-xl font-bold text-white mb-1 tracking-tight">{event.title}</h4>
+            <p className="text-gray-400 leading-relaxed">{event.description}</p>
         </div>
         <div className="flex-shrink-0 mt-4 md:mt-0">
-            <span className={`px-3 py-1 text-sm font-semibold rounded-full border ${typeStyles}`}>
-                {event.type.charAt(0).toUpperCase() + event.type.slice(1)}
+            <span className={`px-4 py-1.5 text-xs font-bold uppercase tracking-wider rounded-full border ${typeStyles}`}>
+                {event.type}
             </span>
         </div>
     </div>

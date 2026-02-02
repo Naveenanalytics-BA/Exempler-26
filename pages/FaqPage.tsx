@@ -6,7 +6,7 @@ import FaqItem from '../components/FaqItem';
 const faqs = [
     { q: "What is EXEMPLER'26?", a: "EXEMPLER'26 is an inter-collegiate management meet organized by the MBA department of Hindusthan College of Arts & Science, featuring various competitions, workshops, and seminars." },
     { q: "Who is eligible to participate?", a: "The event is open to all undergraduate and postgraduate students from any recognized college or university." },
-    { q: "Is there any entry fee?", a: "No, registration for EXEMPLER'26 is completely free for all eligible students." },
+    { q: "Is there any entry fee?", a: "Yes, the registration fee for EXEMPLER'26 is ₹100 per participant." },
     { q: "Can I participate in multiple competitive events?", a: "Participants can register for one primary competitive event. However, you are welcome to attend all workshops and seminars." },
     { q: "Will accommodation be provided for outstation participants?", a: "Unfortunately, we do not provide accommodation. However, we can provide a list of nearby hotels and PGs upon request." },
     { q: "Are certificates provided to all participants?", a: "Yes, all registered participants who attend the event will receive a certificate of participation." },
